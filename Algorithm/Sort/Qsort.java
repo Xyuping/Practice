@@ -10,8 +10,9 @@ public class Qsort {
 	}
 	public static int partition(int[] array,int left,int right,int k_index) {
 		int key = array[k_index];
-		int leftPtr = left-1;
-		int rightPtr = right;
+                swap(array,k_index,right);
+                int leftPtr = left;
+                int rightPtr = right-1;
 		while(true) {
 			while(leftPtr<rightPtr&&array[++leftPtr]<key);
 			while(leftPtr<rightPtr&&array[--rightPtr]>key);			
